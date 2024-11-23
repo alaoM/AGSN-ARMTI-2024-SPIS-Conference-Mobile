@@ -2,7 +2,7 @@
   "expo": {
     "name": "AGSN-ARMTI-2024-SPIS-Conference",
     "slug": "AGSN-ARMTI-2024-SPIS-Conference",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -12,16 +12,23 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.mikexenon.AGSNARMTI2024SPISConference"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.mikexenon.AGSNARMTI2024SPISConference"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "683afbf4-ba2a-40ef-a39e-ab0ec87ccf1e"
+      }
     }
   }
 }

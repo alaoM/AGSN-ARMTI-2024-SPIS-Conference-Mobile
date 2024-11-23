@@ -1,20 +1,29 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import 'react-native-gesture-handler';
+import './i18n'
+import { StyleSheet } from "react-native";
+import RootNavigator from "./screens/Navigation/RootNavigator";
+import { AuthProvider } from "./contextProviders/AuthContext";
+import { ProfileProvider } from "./contextProviders/ProfileContext";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <AuthProvider>
+      <ProfileProvider>
+         <RootNavigator /> 
+      </ProfileProvider>       
+    </AuthProvider>
+        
+ 
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#FFFFFF",
+    height: "100%",
+    paddingHorizontal: "3%",
+  },
+  paragrapgh1: {
+    paddingTop: "10%",
   },
 });
